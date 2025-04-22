@@ -1,1 +1,2 @@
 1) What is the datatype of the null ?
+2) Is JS statically/Dynamically typed why?
