@@ -1,2 +1,4 @@
 1) What is the datatype of the null ?
 2) Is JS statically/Dynamically typed why?
+3) What is the difference in slice/splice methods in Array?
+4) Are the above methods present in string??
