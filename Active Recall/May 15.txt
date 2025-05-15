@@ -1,0 +1,2 @@
+1) What are the different ways to access objects?
+2) How to declare symbol in objects?

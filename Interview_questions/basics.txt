@@ -5,3 +5,5 @@
 5)  Intresting case
  How to make an array with keys are values??
  console.log(Array.from({name : "hitesh"})); // Gives empty array
+6) What are the different ways to access objects?
+7) How to declare symbol in objects?
