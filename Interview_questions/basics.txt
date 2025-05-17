@@ -7,3 +7,4 @@
  console.log(Array.from({name : "hitesh"})); // Gives empty array
 6) What are the different ways to access objects?
 7) How to declare symbol in objects?
+8) Write an named IFFE? Write an SIMPLE IFFE? How to write TWO IFFE ? Parametered IFFE??
