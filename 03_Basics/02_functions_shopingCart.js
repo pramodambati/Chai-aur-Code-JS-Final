@@ -6,7 +6,7 @@ function calculateCartPrice(...num1) {
 
 // console.log(calculateCartPrice(1, 2, 3));
 
-
+// rest operator
 function calculateCartPrice2(val1, val2, ...num1) {
     // return num1 , val1    
     return [num1 , val1 ]   
