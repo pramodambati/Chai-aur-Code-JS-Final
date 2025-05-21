@@ -1,0 +1,3 @@
+1) What is the difference between filter map and reduce ??
+2) when to use thes methods ?
+3) What are different type of loops in JS?
