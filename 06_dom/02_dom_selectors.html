@@ -14,22 +14,41 @@
 </head>
 <body>
     <div id = 'first-div' class="bg-black">
-        <h1 id="title" class="heading">DOM learning on chai aur code</h1>
+        <h1  id="title" class="heading">DOM learning on chai aur code <span style="display: none;">Test text </span></h1>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
 
     <script>
        // How to select h1 element
        // Through id
-        console.log(document.getElementById('title'));
-        console.log(document.getElementById('title').id);
-        console.log(document.getElementById('title').class); // undefined
-        console.log(document.getElementById('title').className); // heading (Behind the scenes it understands the className)
-        console.log(document.getElementById('title').getAttribute);
-        console.log(document.getElementById('title').getAttribute('class'));
+        // console.log(document.getElementById('title'));
+        // console.log(document.getElementById('title').id);
+        // console.log(document.getElementById('title').class); // undefined
+        // console.log(document.getElementById('title').className); // heading (Behind the scenes it understands the className)
+        // console.log(document.getElementById('title').getAttribute);
+        // console.log(document.getElementById('title').getAttribute('class'));
         // console.log(document.getElementById('first-div').getAttribute('class'));
-        // console.log(document.getElementById('title').setAttribute('class', 'test'));
+        // console.log(document.getElementById('title').setAttribute('class', 'test')); // It always overwrite.
         console.log(document.getElementById('title').setAttribute('class', 'test heading'));
+        let title = document.getElementById('title')
+        title.style.backgroundColor = 'red'
+        title.style.padding = "15px"
+        title.style.borderRadius = "20px"
+
+        // Let's see intresting start : 11 : 25 
+        // How to add content
+
+        // How to retrive content ?? 
+        // textContent, innerHTML, innerText
+
+        // what is the difference between innerText and textcontent
+        // console.log(title.innerText);
+        // console.log(title.textContent);
+        // console.log(title.innerHTML);
+        
+        // What is the another way to select query selector
+
+        console.log(document.getElementsByClassName('heading'));
         
     </script>
 </body>
