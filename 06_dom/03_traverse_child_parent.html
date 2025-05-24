@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <!-- comment -->
+        <div class="day">Monday <span>hi</span></div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+    <h1  id="title" class="heading">DOM learning on chai aur code <span style="display: none;">Test text </span></h1>
+
+</body>
+<script>
+    // How to select the parent element
+    // parent (without declaration) → refers to window.parent (the browser window/frame hierarchy)
+
+    // A properly stored reference like parentElement → refers to your actual DOM element
+    // console.log(parent);
+    const parentElement = document.querySelector('.parent')
+    // console.log(parentElement);
+    
+    // How many childeren present in parent ??
+    // console.log(parentElement.children);
+    // console.log(parentElement.children[0]);
+    // console.log(parentElement.children[0].innerHTML);
+    // console.log(document.getElementById('title'));
+    // console.log(document.getElementById('title').innerHTML);
+    
+    // for (let i = 0; i < parentElement.children.length; i++) {
+        // console.log(parentElement.children[i]);        
+        // console.log(parentElement.children[i].innerHTML);        
+    // }
+    // parentElement.children[1].style.color = 'orange'
+
+    // console.log(parentElement.firstElementChild);
+    // console.log(parentElement.lastElementChild);
+    
+    const dayone = document.querySelector('.day')
+    console.log(dayone);
+    
+    // why to use queryselector every time it's costly operation
+
+    console.log(dayone.parentElement);
+    console.log(dayone.nextElementSibling);
+    
+    console.log(`NODES :`, parentElement.childNodes);
+    
+</script>
+</html>
