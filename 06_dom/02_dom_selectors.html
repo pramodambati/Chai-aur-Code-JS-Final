@@ -15,7 +15,18 @@
 <body>
     <div id = 'first-div' class="bg-black">
         <h1  id="title" class="heading">DOM learning on chai aur code <span style="display: none;">Test text </span></h1>
+        <h2>This is first h2</h2>
+        <h2>This is second h2</h2>
+        <h2>This is third h2</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
     </div>
 
     <script>
@@ -29,7 +40,7 @@
         // console.log(document.getElementById('title').getAttribute('class'));
         // console.log(document.getElementById('first-div').getAttribute('class'));
         // console.log(document.getElementById('title').setAttribute('class', 'test')); // It always overwrite.
-        console.log(document.getElementById('title').setAttribute('class', 'test heading'));
+        // console.log(document.getElementById('title').setAttribute('class', 'test heading'));
         let title = document.getElementById('title')
         title.style.backgroundColor = 'red'
         title.style.padding = "15px"
@@ -48,8 +59,62 @@
         
         // What is the another way to select query selector
 
-        console.log(document.getElementsByClassName('heading'));
+        // console.log(document.getElementsByClassName('heading'));
+        // console.log(document.querySelector('h2'));
+        // console.log(document.querySelector('#title'))
+        // console.log(document.querySelector('.heading'))
+        // Depends on YOUR CSS SELECTOR SKILLS
+        // console.log(document.querySelector('input[type="password"]'))
+        // console.log(document.querySelector('ul'))
+
+        // const myul = document.querySelector('ul')
+        // const firstli = myul.querySelector('li')
+        // const turngreen = firstli.style.backgroundColor = 'green'
+        // console.log(turngreen);
+        // turngreen.innerText = "five"
+        
+        // console.log(turngreen);
+        // console.log(turngreen.innerText = "five");
+
+        // const myul = document.querySelector('ul')
+        // const turngreen = myul.querySelector('li')
+        // turngreen.style.backgroundColor = "green"
+        // turngreen.innerText = "five"
+        
+        // console.log(document.querySelectorAll('li')); // Returns Nodelist
+        // const tempLiList = document.querySelectorAll('li')
+        // console.log(tempLiList);
+        
+        // // console.log(tempLiList.style.color = 'green');
+        // console.log(tempLiList[0].style.color = 'green');
+        // console.log(tempLiList[2].innerText = 'green');
+
+        // tempLiList.forEach( function (l) {
+        //     l.style.backgroundColor = 'red'
+        // })
+
+        // const h1List = document.querySelectorAll('h1')
+        // console.log(h1List);
+        // console.log(h1List[0]);
+
+        console.log(document.getElementsByClassName('list-item'));
+        const temphtmlList = document.getElementsByClassName('list-item')
+        // console.log(Array.from(temphtmlList));
+
+        const myconvertedArray = Array.from(temphtmlList)
+        console.log(myconvertedArray);
+        
+        myconvertedArray.forEach(function (li) {
+            li.style.color = 'orange'
+        })
+        
         
     </script>
 </body>
 </html>
+
+<!-- 
+Why your version doesn't work as expected:
+Assignment operations (=) in JavaScript return the value that was assigned,
+not the object that was modified. So turngreen ends up being just the string 'green', not the element or anything useful.
+-->
