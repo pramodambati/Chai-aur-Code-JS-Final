@@ -28,9 +28,13 @@
     }
     addOptiLanguage("golang")
 
-    //Edit
-    
-    console.log(document.querySelector(nth-child(2)));
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
     
 </script>
 </html>
