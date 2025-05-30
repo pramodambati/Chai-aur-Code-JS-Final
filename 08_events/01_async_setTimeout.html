@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async 2 projects</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const sayPramod = function() {
+        console.log('Hello This is pramod'); 
+    }
+    setTimeout(sayPramod, 2000) // give the reference don't execute it
+
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Pramod is Best"
+    }
+    const changeMe = setTimeout(changeText, 2000);
+    // clearInterval(changeMe)
+    // clearTimeout(setTimeout(changeText, 2000)) // it won't work need to give reference so store it in some variable.
+
+    // console.log(document.querySelector('#stop'));
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log(`STOPPED`);
+    }, false)
+</script>
+</html>

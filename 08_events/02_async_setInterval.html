@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetIntreval</title>
+</head>
+<body>
+    <h1>Chai aur javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const sayDate = function() {
+        console.log(`Pramod` , Date.now());
+    }
+   
+    let intrevalId;
+
+    document.querySelector('#start').addEventListener('click', function() {
+        intrevalId =  setInterval(sayDate, 1000)
+        console.log('STARTED');        
+    })
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearInterval(intrevalId)
+        console.log('STOPPED');        
+    })
+
+
+
+
+    /*
+    let c = 'a'
+    c += 'b'
+    console.log(c);
+    
+    c[1] = 'd'
+    console.log(c[1]);
+    
+    c = 'e'
+    console.log(c);
+
+    c = 'd' reassigns the variable c to the new string 'd'.
+
+    Unlike c[1] = 'd' (which fails silently because strings are immutable), this is a full reassignment of the variable.
+
+    Now c no longer refers to 'ab' but to 'd'. 
+    */
+
+    
+</script>
+</html>

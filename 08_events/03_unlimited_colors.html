@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        const randomColor = function() {
+            const hex = '0123456789ABCDEF'
+            let color = '#'
+            for (let i = 0; i < 6; i++) {
+                // color += is imp not just = 
+                color += hex[Math.floor(Math.random() * 10)];
+                // console.log(`color in for ${color}`);
+            }
+            console.log(`color ${color}`);
+            return color
+        }
+        
+        let intervalId 
+        console.log(`intervalId ${intervalId}` );
+        
+        const startChangeColor = function() {
+            let changeColor = function() {
+                document.body.style.backgroundColor = randomColor()
+            }
+            intervalId =  setInterval(changeColor, 1000)  
+            
+        }
+        
+        const stopChangeColor = function() {
+            clearInterval(intervalId)
+            intervalId = null
+            console.log(`intervalId inside stopChangeColor ${intervalId}` );
+            console.log('STOPPED');            
+        }
+
+        document.querySelector('#start').addEventListener('click', startChangeColor)
+        document.querySelector('#stop').addEventListener('click', stopChangeColor)
+
+        // console.log(Math.floor(Math.random() * 10));
+        
+    </script>
+  </body>
+</html>
