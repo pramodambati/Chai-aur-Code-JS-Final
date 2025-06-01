@@ -1,10 +1,10 @@
-// Immediately Invoked Function Expressions (IFFE)
+// Immediately Invoked Function Expressions (IIFE)
 
 // When you want to close a file immediately
 
 // Start DB connection immediately
 
-// To avoid polution from global scope
+// To avoid pollution from the global scope
 
 function chai() {
     console.log(`DB CONNECTED`);    
