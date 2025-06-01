@@ -13,17 +13,17 @@ function chai() {
 chai();
 
 (function chai1() {
-    // Named IFFE
+    // Named IIFE
     console.log(`DB CONNECTED two`);    
 }());
 
 // (function definition)(execution call)
 
 ((name) => {
-    // SIMPLE IFFE
+    // SIMPLE IIFE
     console.log(`DB CONNECTED 3 ${name}`);
     // console.log(this); // {}
 })('pramod')
 
-// After writing IFFE you need end ; Where to stop context
+// After writing IIFE you need end ; Where to stop context
 
