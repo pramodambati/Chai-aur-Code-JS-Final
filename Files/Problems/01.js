@@ -103,8 +103,8 @@ function checkForAlphabetA (name) {
     }
  }
 
- console.log(checkLength('Programming')) // more than 5 characters
- console.log(checkLength('Jeep')) // less than 5 characters
+//  console.log(checkLength('Programming')) // more than 5 characters
+//  console.log(checkLength('Jeep')) // less than 5 characters
 
  /*
 
@@ -141,9 +141,153 @@ function size(value) {
         count ++
     }  
     return count
-}
+
 
 
 console.log(size("Programming"));
 
 */
+
+// 7. Write a function that takes a number as input and determines if it is between 1 and 10.
+// Your ES6 Code here
+
+function isBetweenOneAndTen(num) {
+    if (num > 0 && num <= 10) {
+        return true
+    } else {
+        return false
+    }
+}
+
+// console.log(isBetweenOneAndTen(5)) // true
+// console.log(isBetweenOneAndTen(11)) // false
+
+// 8. Write a function that takes a string as input and determines if it contains the word "hello".
+ // Your ES6 code here
+
+ function isHelloPresent(str) {
+    if (str.toLowerCase().includes('hello')) {
+        return true
+    } else {
+        return false
+    }
+ }
+//  console.log(isHelloPresent('Hello World')) // true
+//  console.log(isHelloPresent('World')) // false
+
+//  9. Write a function that takes a number as input and determines if it is a multiple of 3.
+ // Your ES6 code here
+ function isMultipleOfThree(num) {
+    if (num % 3 == 0) {
+        return true
+    } else {
+        return false
+    }
+ }
+
+//  console.log(isMultipleOfThree(5)) // false
+//  console.log(isMultipleOfThree(9)) // true
+
+//  10. Write a function which takes in a number as input and returns it after multiplying by 10.
+ // Your ES6 code here
+
+ function multiplyByTen(num) {
+    return num*10
+ }
+//  console.log(multiplyByTen(20)) // 200
+//  console.log(multiplyByTen(40)) // 400
+
+
+//  11. Console individual values of the product object using object destructuring.
+ const product = {
+  title: 'iPhone',
+  price: 5999,
+  description: 'The iPhone is a smartphone developed by Apple',
+ }
+ // Your ES6 code here
+
+ const {title, price, description} = product
+//  console.log(title) // iPhone
+//  console.log(price) // 5999
+//  console.log(description) // The iPhone is a smartphone developed by Apple
+
+// 12. Create an object book with properties title, author, and pages. Create a function getBookDetails
+//  that takes a book object as a parameter and returns if the book has more than 100 pages.
+ // Your ES6 code here
+
+ const book = {
+    title : 'My life',
+    author : 'pramu',
+    pages : '101'
+ }
+
+  const book2 = {
+    title : 'your life',
+    author : 'pramu',
+    pages : '11'
+ }
+ function getBookDetails(myobj) {
+    if(myobj.pages > 100) {
+        return true
+    } else {
+        return false
+    }
+ }
+//  console.log(getBookDetails(book)) // logs 'true' if the pages are above 100
+//  console.log(getBookDetails(book2)) // logs 'false' if the pages are 100 or below
+
+// 13. Create a function changeOccupation that takes an object person and a string newOccupation as
+//  parameters, and changes the occupation property of the person object to the newOccupation.
+//  Log the person object to the console before and after calling the function.
+ // Your ES6 code here
+
+ const person = {
+    name : 'Amit',
+    age : 25,
+    occupation : 'Software Engineer'
+ }
+ 
+
+ function changeOccupation(myobj, str) {
+    myobj.occupation = str
+    return myobj
+ }
+
+//  console.log(person) 
+ changeOccupation(person, 'Product Manager')
+//  console.log(person) 
+
+//  14. Given an array numbers containing the numbers 1, 2, and 3. Use array destructuring to log each
+//  number to the console.
+ const numbers = [1, 2, 3]
+
+
+const [a, b, c] = numbers
+ // Your ES6 code here
+//  console.log(a) // logs 1 to the console
+//  console.log(b) // logs 2 to the console
+//  console.log(c) // logs 3 to the console
+
+
+//   15. Convert the given function into ES6 with least amount of characters.
+ function defaultParamsFunc(a, b, c) {
+        if (c === undefined) {
+            c = 4
+        }
+        return a * b * c
+ }
+ console.log(defaultParamsFunc(3, 1)) // 12
+ console.log(defaultParamsFunc(3, 10)) // 120
+
+
+//   15. Convert the given function into ES6 with least amount of characters.
+ function defaultParamsFunc(a, b, c = 4) {
+        return a * b * c
+ }
+ console.log(defaultParamsFunc(3, 1)) // 12
+ console.log(defaultParamsFunc(3, 10)) // 120
+ 
+ const defaultParamsFunc = (a, b, c = 4) => a * b * c
+
+console.log(defaultParamsFunc(3, 1)) // 12
+console.log(defaultParamsFunc(3, 10)) // 120
